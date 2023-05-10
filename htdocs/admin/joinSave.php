@@ -50,7 +50,7 @@
                             <div class="over">
                                 <label for="youNick" class="required">닉네임</label>
                                 <input class="inputStyle" type="text" id="youNick" name="youNick" placeholder="닉네임을 입력해주세요" required>
-                                <a href="#c" class="youCheck">닉네임 중복검사</a>
+                                <a href="#c" class="youCheck" onclick="nickChecking()">닉네임 중복검사</a>
                                 <p class="msg" id="youNickComment"><!-- 이미 등록되어있는 닉네임입니다. --></p>
                             </div>
                             <div>
@@ -90,6 +90,18 @@
             if(youEmail == null || youEmail == ''){
                 $("#youEmailComment").text("* 이메일을 입력해주세요");
             }else {
+                if($("#youEmail").val() == ''){
+                $("#youEmailComment").text("* 이메일을 입력해주세요!");
+                $("#youEmail").focus();
+                return false;
+            }
+            let getYouEmail =  RegExp(/^[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*.[a-zA-Z]{2,3}$/i);
+            if(!getYouEmail.test($("#youEmail").val())){
+                $("#youEmailComment").text("* 이메일 형식에 맞게 작성해주세요!");
+                $("#youEmail").val('');
+                $("#youEmail").focus();
+                return false;
+            }
                 $.ajax({
                     type : "POST",
                     url : "joinCheck.php",
@@ -112,6 +124,53 @@
                 })
             }
         }
+        let isNickCheck = false;
+
+        //닉네임 중복검사
+        function nickChecking(){
+            let youNick = $("#youNick").val();
+
+            if(youNick == null || youNick == ''){
+                $("#youNickComment").text("* 닉네임을 입력해주세요");
+            }else {
+                // 닉네임 유효성 검사
+                if($("#youNick").val() == ''){
+                    $("#youNickComment").text("* 닉네임을 입력해주세요!");
+                    $("#youNick").focus();
+                    return false;
+                }
+                let getYouNick =  RegExp(/^[가-힣]+$/);
+                if(!getYouNick.test($("#youNick").val())){
+                    $("#youNickComment").text("* 닉네임은 한글만 사용가능합니다.");
+                    $("#youNick").val('');
+                    $("#youNick").focus();
+                    return false;
+                }
+                
+                $.ajax({
+                    type : "POST",
+                    url : "joinCheck.php",
+                    data : {"youNick" : youNick, "type" : "isNickCheck"},
+                    dataType : "json",
+                    success : function(data){
+                        if(data.result == "good"){
+                            $("#youNickComment").text("* 사용 가능한 닉네임 입니다");
+                            isNickCheck = true;
+                        }else {
+                            $("#youNickComment").text("* 이미 존재하는 닉네임 입니다");
+                            isNickCheck = false;
+                        }
+                    },
+                    error : function(request, status, error){
+                        console.log("request" + request);
+                        console.log("status" + status);
+                        console.log("error" + error);
+                    }
+                })
+            }
+        }
+
+
         function joinChecks(){
             //이름 유효성 검사
             if($("#youName").val() == ''){

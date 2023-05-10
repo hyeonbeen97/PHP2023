@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입 페이지</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/MAIN/footer.css">
+    <link rel="stylesheet" href="../assets/css/BOARD/board.css">
+
+    <!-- SCRIPT -->
+    <script defer src="assets/js/common.js"></script>
+    <style>
+        .calendal__header {
+            text-align: center;
+        }
+        .calendal__header h5 {
+            margin-top: 50px;
+            font-family: var(--main__en);
+            font-weight: 700;
+            font-size: 20px;
+            color: var(--color__green);
+        }
+        .calendal__header h2 {
+            font-family: var(--main__en);
+            font-weight: 900;
+            font-size: 70px;
+            color: var(--color__black);
+        }
+        .calendal__table {
+            margin-top: 20px;
+            margin-bottom: 60px;
+            background-color: var(--color__white);
+            text-align: center;
+            padding: 30px;
+        }
+        .calendal__table table {
+            text-align: center;
+        }
+        .calendal__table table th {
+            padding: 15px 5px;
+            font-weight: 800;
+            color: var(--color__green);
+        }
+        .calendal__table table th:first-child {
+            color: red;
+        }
+
+        .calendal__table table td {
+            padding: 10px 15px 80px 10px;
+            border: 1px solid var(--bg__gray);
+            text-align: right;
+            align-items: top;
+            position: relative;
+            
+        }
+        .calendal__table table tr>td:first-child {
+            border-left: 0px;
+            color: red;
+
+        }
+        .calendal__table table tr>td:last-child {
+            border-right: 0px;
+        }
+        .calendal__table table td a:hover {
+            text-decoration: underline;
+            text-underline-position: under;
+        }
+        .calendal__table table td:hover {
+            background-color: var(--color__green);
+        }
+        .month {
+            font-family: var(--main__en);
+            font-weight: bold;
+            font-size: 50px;
+            margin: 20px auto;
+
+        }
+        .modal-btn::before {
+            content: '';
+            width: 10px;
+            height: 10px;
+            background-color: #00fddb;
+            border-radius: 50%;
+            position: absolute;
+            left: 10%;
+            top: 10%;
+            /* transform: calc(10%); */
+            display: none;
+        }
+        .modal-btn::after {
+            content: '';
+            width: 10px;
+            height: 10px;
+            background-color: #ff0000;
+            border-radius: 50%;
+            position: absolute;
+            left: 20%;
+            top: 10%;
+
+        }
+
+        /* 모달 스타일 */
+        .modal {
+        display: none; /* 기본적으로 모달은 보이지 않도록 설정 */
+        position: fixed; /* 모달이 화면에서 고정되도록 설정 */
+        z-index: 1; /* 모달이 가장 위에 오도록 설정 */
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto; /* 모달 내용이 넘칠 경우 스크롤 가능하도록 설정 */
+        background-color: rgba(0, 0, 0, 0.4); /* 모달 배경색 */
+        backdrop-filter: blur(3px);
+        }
+        .modal__inner {
+            margin: 15% auto; /* 모달이 화면 중앙에 위치하도록 설정 */
+            display: flex;
+            width: 50%;
+            height: 400px;
+            background-color: rgba(3, 59, 10, 0.4); 
+
+
+        }
+
+        /* 모달 내용 스타일 */
+        .modal-content1 {
+            width: 40%; /* 모달 내용 너비 */
+
+
+        }
+        .modal-content1 img {
+            width: 90%;
+            height: 360px;
+            margin: 20px;
+
+        }
+        .modal-content2 {
+            padding: 20px 5px;
+            width: 25%; /* 모달 내용 너비 */
+
+        }
+        .modal-content2  p {
+            text-align: left;
+            color: var(--color__white);
+            font-family: var(--main__ko);
+            font-weight: 500;
+
+        }
+
+        .modal-content3 {
+            padding: 20px;
+            width: 35%; /* 모달 내용 너비 */
+            height: 400px;
+
+        }
+        .modal-content3 p {
+            text-align: left;
+            color: var(--color__white);
+            font-family: var(--main__ko);
+            font-weight: 500;
+
+        }
+        .cont2__inner {
+            text-align: center;
+            margin-top: 10px;
+            width: 100%;
+            height: 90%;
+            background-color: var(--color__white);
+            font-family: var(--main__ko);
+            padding: 30px 10px;
+
+        }
+        .cont2__inner h1 {
+            font-size: 22px;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+        .cont3__inner {
+            margin-top: 10px;
+            width: 100%;
+            height: 90%;
+            background-color: var(--color__white);
+
+        }
+
+
+        /* 모달 닫기 버튼 스타일 */
+        .close {
+            color: #aaaaaa; /* 버튼 색상 */
+            float: right;
+            margin-top: -15px;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #000;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body class="bgStyle3">
+    
+    <div id="skip">
+        <a href="#header">헤더 영역 바로가기</a>
+        <a href="#main">컨텐츠 영역 바로가기</a>
+        <a href="#footer">푸터 영역 바로가기</a>
+    </div>
+    <!-- //skip -->
+
+    <header id="header">
+        <h2 class="blind">헤더 영역</h2>
+        <div class="container">
+            <div class="header__inner bmStyle">
+                <div class="left">
+                    <h1 class="logo"> <a href="/html/main.html">PLANTY</a></h1>
+                </div>
+                <nav class="nav__inner">
+                    <ul>
+                        <li><a href="#">PLANTY</a></li>
+                        <li><a href="#">식물 사전</a></li>
+                        <li><a href="#">캘린더</a></li>
+                        <li><a href="#">커뮤니티</a></li>
+                        <li><a href="#">고객센터</a></li>
+                    </ul>
+                </nav>
+                <div class="right">
+                    <ul>
+                        <li><a href="/php2/html/LOGIN/login.html">Sign in</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- //header -->
+
+    <main id="main" class="container bmStyle">
+        <div class="calendal__header">
+            <h5>CALENDAR</h5>
+            <h2>2023</h2>
+        </div>
+        <!-- //intro__inner -->
+        <div class="calendal__inner">
+            <div class="calendal__table">
+                <div class="month">
+                    <div class="month__prev"></div>
+                    MAY 
+                    <div class="month__next"></div>
+
+                </div>
+                <table>
+                    <colgroup>
+                        <col style="width: 14%;">
+                        <col style="width: 14%;">
+                        <col style="width: 14%;">
+                        <col style="width: 14%;">
+                        <col style="width: 14%;">
+                        <col style="width: 14%;">
+                        <col style="width: 14%;">
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th>일</th>
+                            <th>월</th>
+                            <th>화</th>
+                            <th>수</th>
+                            <th>목</th>
+                            <th>금</th>
+                            <th>토</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="modal-btn"></td>
+                            <td class="modal-btn">1</td>
+                            <td class="modal-btn">2</td>
+                            <td class="modal-btn">3</td>
+                            <td class="modal-btn">4</td>
+                            <td class="modal-btn">5</td>
+                            <td class="modal-btn">6</td>
+                        </tr>
+                        <tr>
+                            <td class="modal-btn">7</td>
+                            <td class="modal-btn">8</td>
+                            <td class="modal-btn">9</td>
+                            <td class="modal-btn">10</td>
+                            <td class="modal-btn">11</td>
+                            <td class="modal-btn">12</td>
+                            <td class="modal-btn">13</td>
+                        </tr>
+                        <tr>
+                            <td class="modal-btn">14</td>
+                            <td class="modal-btn">15</td>
+                            <td class="modal-btn">16</td>
+                            <td class="modal-btn">17</td>
+                            <td class="modal-btn">18</td>
+                            <td class="modal-btn">19</td>
+                            <td class="modal-btn">20</td>
+                        </tr>
+                        <tr>
+                            <td class="modal-btn">21</td>
+                            <td class="modal-btn">22</td>
+                            <td class="modal-btn">23</td>
+                            <td class="modal-btn">24</td>
+                            <td class="modal-btn">25</td>
+                            <td class="modal-btn">26</td>
+                            <td class="modal-btn">27</td>
+                        </tr>
+                        <tr>
+                            <td class="modal-btn">28</td>
+                            <td class="modal-btn">29</td>
+                            <td class="modal-btn">30</td>
+                            <td class="modal-btn">31</td>
+                            <td class="modal-btn"></td>
+                            <td class="modal-btn"></td>
+                            <td class="modal-btn"></td>
+                        </tr>
+
+                    </tbody>
+                </table>
+                <div id="modal" class="modal">
+                    <div class="modal__inner">
+                        <div class="modal-content1">
+                            <img src="/htdocs/php2/html/assets/img/MAIN/card_img01.png" alt="">
+                        </div>
+                        <div class="modal-content2">
+                            <p>내 식물정보</p>
+                            <div class="cont2__inner">
+                                <h1>투투키</h1>
+                                <h3>처음 데려온 날</h3>
+                                <p>2021년 2월 22일</p>
+
+                                <h3>마지막 분갈이 날</h3>
+                                <p>2021년 5월 1일</p>
+
+                                <h3>마지막 물준 날</h3>
+                                <p>2021년 5월 1일</p>
+
+                            </div>
+                        </div>
+                        <div class="modal-content3">
+                            <span class="close">&times;</span>
+                            <p>관리 Tip</p>
+                            <div class="cont3__inner"></div>
+                        </div> 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- //main -->
+
+    <footer id="footer">
+        <h2 class="blind">푸터 영역</h2>
+                <div class="footer__inner">
+            <div class="f_logo">
+                <span><a href="#">PLANTY</a></span>
+            </div>
+            <nav><ul>
+                <li><a href="#">PLANTY
+                    <ul>
+                        <li><a href="#">브랜드철학</a></li>
+                        <li><a href="#">핵심가치</a></li>
+                    </ul>
+
+                </a></li>
+                <li><a href="#">식물사전
+                    <ul>
+                        <li><a href="#">식물관리정보</a></li>
+                        <li><a href="#">식물소개</a></li>
+                        <li><a href="#">식물검색</a></li>
+                    </ul>
+                </a></li>
+                <li><a href="#">캘린더
+                    <ul>
+                        <li><a href="#">이달의 식물</a></li>
+                        <li><a href="#">내식물</a></li>
+                    </ul>
+
+                </a></li>
+                <li><a href="#">커뮤니티
+                    <ul>
+                        <li><a href="#">플랜테리어</a></li>
+                        <li><a href="#">내 식물 공유</a></li>
+                    </ul>
+                </a></li>
+                <li><a href="#">고객센터
+                    <ul>
+                        <li><a href="#">문의사항</a></li>
+                        <li><a href="#">이벤트</a></li>
+                        <li><a href="#">공지사항</a></li>
+                        <li><a href="#">F&Q</a></li>
+                    </ul>
+                </a></li>
+
+            </ul></nav>
+
+        </div>
+        <div class="copyright">
+            2023 PLANTY<br>Copyright ⓒAll Rights Reserved.
+        </div>
+    </footer>
+    <!-- //footer -->
+</body>
+</html>
+            </div>
+        </div>
+    </main>
+    <!-- //main -->
+
+    <footer id="footer">
+        <h2 class="blind">푸터 영역</h2>
+                <div class="footer__inner">
+            <div class="f_logo">
+                <span><a href="#">PLANTY</a></span>
+            </div>
+            <nav><ul>
+                <li><a href="#">PLANTY
+                    <ul>
+                        <li><a href="#">브랜드철학</a></li>
+                        <li><a href="#">핵심가치</a></li>
+                    </ul>
+
+                </a></li>
+                <li><a href="#">식물사전
+                    <ul>
+                        <li><a href="#">식물관리정보</a></li>
+                        <li><a href="#">식물소개</a></li>
+                        <li><a href="#">식물검색</a></li>
+                    </ul>
+                </a></li>
+                <li><a href="#">캘린더
+                    <ul>
+                        <li><a href="#">이달의 식물</a></li>
+                        <li><a href="#">내식물</a></li>
+                    </ul>
+
+                </a></li>
+                <li><a href="#">커뮤니티
+                    <ul>
+                        <li><a href="#">플랜테리어</a></li>
+                        <li><a href="#">내 식물 공유</a></li>
+                    </ul>
+                </a></li>
+                <li><a href="#">고객센터
+                    <ul>
+                        <li><a href="#">문의사항</a></li>
+                        <li><a href="#">이벤트</a></li>
+                        <li><a href="#">공지사항</a></li>
+                        <li><a href="#">F&Q</a></li>
+                    </ul>
+                </a></li>
+
+            </ul></nav>
+
+        </div>
+        <div class="copyright">
+            2023 PLANTY<br>Copyright ⓒAll Rights Reserved.
+        </div>
+    </footer>
+    <!-- //footer -->
+    <script>
+// 모달 버튼을 클릭하면 모달 열기
+document.querySelectorAll(".modal-btn").forEach(function(button) {
+  button.addEventListener("click", function() {
+    document.querySelector(".modal").style.display = "block";
+  });
+});
+
+// 모달 닫기 버튼을 클릭하면 모달 닫기
+document.querySelector(".close").addEventListener("click", function() {
+  document.querySelector(".modal").style.display = "none";
+});
+
+// 모달 외부를 클릭하면 모달 닫기
+window.addEventListener("click", function(event) {
+  if (event.target == document.querySelector(".modal")) {
+    document.querySelector(".modal").style.display = "none";
+  }
+});
+    </script>
+</body>
+</html>

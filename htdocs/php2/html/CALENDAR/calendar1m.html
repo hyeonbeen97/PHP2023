@@ -10,200 +10,10 @@
     <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="stylesheet" href="../assets/css/MAIN/footer.css">
     <link rel="stylesheet" href="../assets/css/BOARD/board.css">
+    <link rel="stylesheet" href="calendar.css">
 
     <!-- SCRIPT -->
     <script defer src="assets/js/common.js"></script>
-    <style>
-        .calendal__header {
-            text-align: center;
-        }
-        .calendal__header h5 {
-            margin-top: 50px;
-            font-family: var(--main__en);
-            font-weight: 700;
-            font-size: 20px;
-            color: var(--color__green);
-        }
-        .calendal__header h2 {
-            font-family: var(--main__en);
-            font-weight: 900;
-            font-size: 70px;
-            color: var(--color__black);
-        }
-        .calendal__table {
-            margin-top: 20px;
-            margin-bottom: 60px;
-            background-color: var(--color__white);
-            text-align: center;
-            padding: 30px;
-        }
-        .calendal__table table {
-            text-align: center;
-        }
-        .calendal__table table th {
-            padding: 15px 5px;
-            font-weight: 800;
-            color: var(--color__green);
-        }
-        .calendal__table table th:first-child {
-            color: red;
-        }
-
-        .calendal__table table td {
-            padding: 10px 15px 80px 10px;
-            border: 1px solid var(--bg__gray);
-            text-align: right;
-            align-items: top;
-            position: relative;
-            
-        }
-        .calendal__table table tr>td:first-child {
-            border-left: 0px;
-            color: red;
-
-        }
-        .calendal__table table tr>td:last-child {
-            border-right: 0px;
-        }
-        .calendal__table table td a:hover {
-            text-decoration: underline;
-            text-underline-position: under;
-        }
-        .calendal__table table td:hover {
-            background-color: var(--color__green);
-        }
-        .month {
-            font-family: var(--main__en);
-            font-weight: bold;
-            font-size: 50px;
-            margin: 20px auto;
-
-        }
-        .modal-btn::before {
-            content: '';
-            width: 10px;
-            height: 10px;
-            background-color: #00fddb;
-            border-radius: 50%;
-            position: absolute;
-            left: 10%;
-            top: 10%;
-            /* transform: calc(10%); */
-            display: none;
-        }
-        .modal-btn::after {
-            content: '';
-            width: 10px;
-            height: 10px;
-            background-color: #ff0000;
-            border-radius: 50%;
-            position: absolute;
-            left: 20%;
-            top: 10%;
-
-        }
-
-        /* 모달 스타일 */
-        .modal {
-        display: none; /* 기본적으로 모달은 보이지 않도록 설정 */
-        position: fixed; /* 모달이 화면에서 고정되도록 설정 */
-        z-index: 1; /* 모달이 가장 위에 오도록 설정 */
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        overflow: auto; /* 모달 내용이 넘칠 경우 스크롤 가능하도록 설정 */
-        background-color: rgba(0, 0, 0, 0.4); /* 모달 배경색 */
-        backdrop-filter: blur(3px);
-        }
-        .modal__inner {
-            margin: 15% auto; /* 모달이 화면 중앙에 위치하도록 설정 */
-            display: flex;
-            width: 50%;
-            height: 400px;
-            background-color: rgba(3, 59, 10, 0.4); 
-
-
-        }
-
-        /* 모달 내용 스타일 */
-        .modal-content1 {
-            width: 40%; /* 모달 내용 너비 */
-
-
-        }
-        .modal-content1 img {
-            width: 90%;
-            height: 360px;
-            margin: 20px;
-
-        }
-        .modal-content2 {
-            padding: 20px 5px;
-            width: 25%; /* 모달 내용 너비 */
-
-        }
-        .modal-content2  p {
-            text-align: left;
-            color: var(--color__white);
-            font-family: var(--main__ko);
-            font-weight: 500;
-
-        }
-
-        .modal-content3 {
-            padding: 20px;
-            width: 35%; /* 모달 내용 너비 */
-            height: 400px;
-
-        }
-        .modal-content3 p {
-            text-align: left;
-            color: var(--color__white);
-            font-family: var(--main__ko);
-            font-weight: 500;
-
-        }
-        .cont2__inner {
-            text-align: center;
-            margin-top: 10px;
-            width: 100%;
-            height: 90%;
-            background-color: var(--color__white);
-            font-family: var(--main__ko);
-            padding: 30px 10px;
-
-        }
-        .cont2__inner h1 {
-            font-size: 22px;
-            font-weight: 600;
-            margin-bottom: 10px;
-        }
-        .cont3__inner {
-            margin-top: 10px;
-            width: 100%;
-            height: 90%;
-            background-color: var(--color__white);
-
-        }
-
-
-        /* 모달 닫기 버튼 스타일 */
-        .close {
-            color: #aaaaaa; /* 버튼 색상 */
-            float: right;
-            margin-top: -15px;
-            font-size: 28px;
-            font-weight: bold;
-        }
-
-        .close:hover,
-        .close:focus {
-            color: #000;
-            text-decoration: none;
-            cursor: pointer;
-        }
-    </style>
 </head>
 <body class="bgStyle3">
     
@@ -249,10 +59,12 @@
         <div class="calendal__inner">
             <div class="calendal__table">
                 <div class="month">
-                    <div class="month__prev"></div>
-                    MAY 
-                    <div class="month__next"></div>
-
+                    <a href="calendar12m.html"><div class="month__prev"></div></a>                    
+                    <div>
+                        <div>2</div>
+                        <span>January</span>
+                    </div>
+                    <a href="calendar2m.html"><div class="month__next"></div></a>
                 </div>
                 <table>
                     <colgroup>
@@ -484,6 +296,82 @@ window.addEventListener("click", function(event) {
     document.querySelector(".modal").style.display = "none";
   }
 });
+    </script>
+    <script>
+        function calendarInit() {
+
+// 날짜 정보 가져오기
+let date = new Date(); // 현재 날짜(로컬 기준) 가져오기
+let utc = date.getTime() + (date.getTimezoneOffset() * 60 * 1000); // uct 표준시 도출
+let kstGap = 9 * 60 * 60 * 1000; // 한국 kst 기준시간 더하기
+let today = new Date(utc + kstGap); // 한국 시간으로 date 객체 만들기(오늘)
+
+let thisMonth = new Date(today.getFullYear(), today.getMonth(), today.getDate());
+// 달력에서 표기하는 날짜 객체
+
+
+let currentYear = thisMonth.getFullYear(); // 달력에서 표기하는 연
+let currentMonth = thisMonth.getMonth(); // 달력에서 표기하는 월
+let currentDate = thisMonth.getDate(); // 달력에서 표기하는 일
+
+// kst 기준 현재시간
+// console.log(thisMonth);
+
+// 캘린더 렌더링
+renderCalender(thisMonth);
+
+function renderCalender(thisMonth) {
+
+    // 렌더링을 위한 데이터 정리
+    currentYear = thisMonth.getFullYear();
+    currentMonth = thisMonth.getMonth();
+    currentDate = thisMonth.getDate();
+
+    // 이전 달의 마지막 날 날짜와 요일 구하기
+    let startDay = new Date(currentYear, currentMonth, 0);
+    let prevDate = startDay.getDate();
+    let prevDay = startDay.getDay();
+
+    // 이번 달의 마지막날 날짜와 요일 구하기
+    let endDay = new Date(currentYear, currentMonth + 1, 0);
+    let nextDate = endDay.getDate();
+    let nextDay = endDay.getDay();
+
+    // console.log(prevDate, prevDay, nextDate, nextDay);
+
+    // 현재 월 표기
+    $('.year-month').text(currentYear + '.' + (currentMonth + 1));
+
+    // 렌더링 html 요소 생성
+    calendar = document.querySelector('.dates')
+    calendar.innerHTML = '';
+    
+    // 지난달
+    for (let i = prevDate - prevDay + 1; i <= prevDate; i++) {
+        calendar.innerHTML = calendar.innerHTML + '<div class="day prev disable">' + i + '</div>'
+    }
+    // 이번달
+    for (let i = 1; i <= nextDate; i++) {
+        calendar.innerHTML = calendar.innerHTML + '<div class="day current">' + i + '</div>'
+    }
+    // 다음달
+    for (let i = 1; i <= (7 - nextDay == 7 ? 0 : 7 - nextDay); i++) {
+        calendar.innerHTML = calendar.innerHTML + '<div class="day next disable">' + i + '</div>'
+    }
+    // 오늘 날짜 표기
+    if (today.getMonth() == currentMonth) {
+        todayDate = today.getDate();
+        var currentMonthDate = document.querySelectorAll('.modal-btn');
+        currentMonthDate[todayDate -1].classList.add('today');
+    }
+        // 오늘 날짜 표기
+        if (today.getMonth() == currentMonth) {
+        todayDate = today.getDate();
+        var currentMonthDate = document.querySelectorAll('.modal-btn');
+        currentMonthDate[todayDate -1].classList.add('today');
+    }
+}
+        }
     </script>
 </body>
 </html>

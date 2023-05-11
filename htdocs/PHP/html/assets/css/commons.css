@@ -105,6 +105,18 @@ body.windows {
     cursor: pointer;
 
 }
+.btnstyle4 {  /*기본버튼 스타일*/
+    display: inline-block;
+    padding: 0.8em 2em;
+    border-radius: 100px;
+    margin: 0 0.5em;
+    background-color: var(--color__black);
+    color: var(--color__white);
+    font-size: 1rem;
+    text-align: center;
+    cursor: pointer;
+
+}
 .btnstyle10 {
     display: block;
     background-color: var(--color__black);
@@ -149,6 +161,14 @@ body.windows {
     border: 0;
     font-weight: 300;
     
+}
+.inputStyle2 {
+    width: 50%;
+    background-color: #fff;
+    border-radius: 100px;
+    padding: 1em 2em;
+    border: 0;
+    font-weight: 300;
 }
 /* labelStyle */
 label {

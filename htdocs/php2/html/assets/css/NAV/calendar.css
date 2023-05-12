@@ -182,14 +182,16 @@ backdrop-filter: blur(3px);
 .month__prev  {
     width: 40px;
     height: 40px;
-    background-image: url(img/cal_prev_icon.svg);
+    background-image: url(/html/assets/img/CALENDAR/cal_prev_icon.svg);
     background-repeat: no-repeat;
+
 }
 .month__next {
-    background-image: url(img/cal_next_icon.svg);
+    background-image: url(/html/assets/img/CALENDAR/cal_next_icon.svg);
     background-repeat: no-repeat;
     width: 40px;
     height: 40px;
+
 } 
 .month>div span {
     font-size: 10px;

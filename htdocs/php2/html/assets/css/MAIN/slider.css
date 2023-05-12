@@ -1,7 +1,5 @@
 /* slider__wrap */
-.slider__inner {
-    margin: 0;padding: 0;
-    }
+
     .slider__inner .slider {
         background-size: cover;
         background-repeat: no-repeat;

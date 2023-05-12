@@ -1,16 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>회원가입 페이지</title>
+    <title>달력</title>
 
     <!-- CSS -->
     <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="stylesheet" href="../assets/css/MAIN/footer.css">
     <link rel="stylesheet" href="../assets/css/BOARD/board.css">
-    <link rel="stylesheet" href="calendar.css">
+    <link rel="stylesheet" href="../assets/css/NAV/calendar.css">
+
 
     <!-- SCRIPT -->
     <script defer src="assets/js/common.js"></script>
@@ -29,7 +30,7 @@
         <div class="container">
             <div class="header__inner bmStyle">
                 <div class="left">
-                    <h1 class="logo"> <a href="/html/main.html">PLANTY</a></h1>
+                    <h1 class="logo"> <a href="/php2/html/main.html">PLANTY</a></h1>
                 </div>
                 <nav class="nav__inner">
                     <ul>
@@ -49,7 +50,6 @@
         </div>
     </header>
     <!-- //header -->
-
     <main id="main" class="container bmStyle">
         <div class="calendal__header">
             <h5>CALENDAR</h5>
@@ -277,25 +277,6 @@
         </div>
     </footer>
     <!-- //footer -->
-    <script>
-// 모달 버튼을 클릭하면 모달 열기
-document.querySelectorAll(".modal-btn").forEach(function(button) {
-  button.addEventListener("click", function() {
-    document.querySelector(".modal").style.display = "block";
-  });
-});
-
-// 모달 닫기 버튼을 클릭하면 모달 닫기
-document.querySelector(".close").addEventListener("click", function() {
-  document.querySelector(".modal").style.display = "none";
-});
-
-// 모달 외부를 클릭하면 모달 닫기
-window.addEventListener("click", function(event) {
-  if (event.target == document.querySelector(".modal")) {
-    document.querySelector(".modal").style.display = "none";
-  }
-});
-    </script>
+    <script src="../assets/js/NAV/calendar.js"></script>
 </body>
 </html>

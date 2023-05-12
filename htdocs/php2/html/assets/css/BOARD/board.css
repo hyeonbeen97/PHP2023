@@ -36,6 +36,7 @@
     display: flex;
     justify-content: space-between;
     padding-left: 40px;
+    flex-wrap: wrap;
 }
 .service_btn > div {
     width: 60%;
@@ -95,7 +96,7 @@
 .search__center input {
     border: 0;
     background-color: var(--color__white);
-    padding: 9px 150px;
+    padding: 9px 13%;
     border-radius: 5px;
     height: 40px;
     margin: 0 10px;
@@ -201,4 +202,73 @@
 .board__write button {
   float: right;
   margin-top: 10px;
+  margin-left: 20px;
+}
+/* board__Write */
+.board__header {
+    text-align: center;
+    padding-top: 100px;
+}
+.board__header .logo {
+    font-weight: 900;
+    font-size: 70px;
+    margin-top: 40px;
+    color: var(--color__green);
+    font-family: "Montserrat";
+}
+.board__header h2 {
+    font-size: 26px;
+    font-family: "NexonLv1Gothic";
+    font-weight: 500;
+    color: var(--color__green);
+}
+.board__header p {
+    font-size: 15px;
+    font-weight: 400;
+}
+.board__write {
+    text-align: left;
+}
+.board__write label {
+    font-size: 24px;
+    font-weight: 400;
+    color: var(--color__green);
+}
+#boardtitle {
+    height: 60px;
+    font-size: 16px;
+}
+#boardContents {
+    height: 450px;
+    font-size: 16px;
+}
+/* board__View */
+.board__View {
+    border-bottom: 2px solid var(--color__green);
+    border-top: 2px solid var(--color__green);
+    background-color: #fff;
+}
+.board__View tbody td:first-child {
+    height: 108px;
+    font-size: 32px;
+    text-align: center;
+    color: var(--color__green);
+}
+.board__View td,
+.board__View th {
+    border-bottom: 1px solid var(--color__green);
+    border-top: 1px solid var(--color__green);
+    padding: 15px;
+}
+.board__View tbody th {
+    background-color: rgb(100, 149, 105,0.2);
+    color: var(--color__green);
+}
+.board__View tr:last-child td {
+    height: 500px;
+    vertical-align: top;
+}
+.board__View th {
+    background-color: var(--color__gray2);
+    font-weight: 600;
 }

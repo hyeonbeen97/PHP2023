@@ -1,16 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>회원가입 페이지</title>
+    <title>달력</title>
 
     <!-- CSS -->
     <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="stylesheet" href="../assets/css/MAIN/footer.css">
     <link rel="stylesheet" href="../assets/css/BOARD/board.css">
-    <link rel="stylesheet" href="calendar.css">
+    <link rel="stylesheet" href="../assets/css/NAV/calendar.css">
 
 
     <!-- SCRIPT -->
@@ -30,7 +30,7 @@
         <div class="container">
             <div class="header__inner bmStyle">
                 <div class="left">
-                    <h1 class="logo"> <a href="/html/main.html">PLANTY</a></h1>
+                    <h1 class="logo"> <a href="/php2/html/main.html">PLANTY</a></h1>
                 </div>
                 <nav class="nav__inner">
                     <ul>
@@ -315,30 +315,6 @@ window.addEventListener("click", function(event) {
         });
     </script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script>
-        $(document).ready(function() {
-  // 날짜 클릭시 모달창 열기
-  $('.modal-btn').click(function() {
-    var date = $(this).text(); // 클릭한 일자 가져오기
-    $('#modal-date').text(date); // 모달 내용에 일자 삽입
-    $('#modal').css('display', 'block'); // 모달 열기
-  });
-
-  // 모달창 닫기 버튼 클릭시 모달창 닫기
-  $('#modal-close').click(function() {
-    $('#modal').css('display', 'none');
-  });
-
-  // 일정 등록 버튼 클릭시 처리
-  $('#modal-submit').click(function() {
-    var date = $('#modal-date').text(); // 모달 내용에서 일자 가져오기
-    var title = $('#modal-title').val(); // 일정 제목 가져오기
-    var description = $('#modal-description').val(); // 일정 설명 가져오기
-
-    // 일정 추가 코드를 작성하세요.
-    // ...
-  });
-});
-    </script>
+    <script src="../assets/js/NAV/calendar.js"></script>
 </body>
 </html>

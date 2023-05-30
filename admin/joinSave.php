@@ -69,8 +69,8 @@
                                 <p class="msg" id="youBirthComment"><!-- 생년월일이 일치하지 않습니다. --></p>
                             </div>
                             <div>
-                                <label for="youPhome">연락처</label>
-                                <input class="inputStyle" type="text" id="youPhome" name="youPhome" placeholder="연락처를 입력해주세요" maxlength="15" required>
+                            <label for="youPhone">연락처</label>
+                            <input class="inputStyle" type="text" id="youPhone" name="youPhone" placeholder="연락처를 입력해주세요" maxlength="15" required>
                                 <p class="msg" id="youBirthComment"><!-- 휴대폰 번호를 입력해주세요 --></p>
                             </div>
                             <button type="submit" class="btnstyle10">회원가입 완료</button>

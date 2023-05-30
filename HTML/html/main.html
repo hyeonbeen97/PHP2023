@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>메인</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- SCRIPT -->
+    <script defer src="assets/js/common.js"></script>
+    
+</head>
+<body class="gray">
+    
+    <div id="skip">
+        <a href="#header">헤더 영역 바로가기</a>
+        <a href="#main">컨텐츠 영역 바로가기</a>
+        <a href="#footer">푸터 영역 바로가기</a>
+    </div>
+    <!-- //skip -->
+
+    <header id="header">
+        <div class="header__inner container">
+            <div class="left">
+                <a href="../index.html" class="star">
+                    <span class="blind">리스트보기</span>
+                </a>
+            </div>
+            <h1 class="logo"><a href="main.html">Developer Blog</a></h1>
+            <div class="right">
+                <ul>
+                    <li><a href="join.html">회원가입</a></li>
+                </ul>
+            </div>
+        </div>
+        <nav class="nav__inner">
+            <ul>
+                <li><a href="join.html">회원가입</a></li>
+                <li><a href="login.html">로그인</a></li>
+                <li><a href="board.html">게시판</a></li>
+                <li><a href="blog.html">블로그</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- //header -->
+
+    <main id="main" class="container">
+        <div class="intro__inner bmStyle">
+            <picture class="intro__images">
+                <source srcset="assets/img/intro01.png, assets/img/intro01@2x.png 2x, assets/img/intro01@3x.png 3x" />
+                <img src="assets/img/intro01.png" alt="소개이미지">
+            </picture> 
+            <p class="intro__text">
+                어떤 일이라도 노력하고 즐기면 그 결과는 빛을 바란다고 생각합니다.
+                신입의 열정과 도전정신을 깊숙히 새기며 배움에 있어 겸손함을 
+                유지하며 세부적인 곳까지 파고드는 개발자가 되겠습니다.
+            </p>
+        </div>
+
+        <div class="blog__inner">
+            <div class="blog__wrap bmStyle">
+                <h2>Javascript Topic</h2>
+                <div class="cards__inner col2 line2">
+                    <div class="card">
+                        <figure class="card__img">
+                            <source srcset="assets/img/blog02.jpg, assets/img/blog02@2x.jpg, assets/img/blog02@3x.jpg" />
+                            <img src="assets/img/blog02.jpg" alt="카드이미지">
+                            <div class="card__title">
+                                <h3>자바스크립트 잘 익히는 방법</h3>
+                                <p>JavaScript의 기본부터 시작하십시오. JavaScript를 잘 이해하려면 먼저 기본을 배우는 것이 중요합니다. 문법, 변수, 함수와 같은 것들을 배웁니다.</p>
+                            </div>
+                            <div class="card__info">
+                                <a href="#" class="more">더보기</a>
+                            </div>
+                        </figure>
+                    </div>
+                    <div class="card">
+                        <figure class="card__img">
+                            <source srcset="assets/img/blog03.jpg, assets/img/blog03@2x.jpg, assets/img/blog03@3x.jpg" />
+                            <img src="assets/img/blog03.jpg" alt="카드이미지">
+                            <div class="card__title">
+                                <h3>리액트의 추세 알려줘</h3>
+                                <p>React의 인기는 향후 몇 년 동안 계속 증가할 것으로 예상됩니다. React는 강력하고 유연한 라이브러리이며 다양한 웹사이트와 모바일 앱을 구축하는 데 사용할 수 있습니다.
+                                     또한 React는 대규모 커뮤니티 지원을 받으므로 개발자가 문제를 해결하고 배우는 데 도움을 받을 수 있습니다.</p>
+                            </div>
+                            <div class="card__info">
+                                <a href="#" class="more">더보기</a>
+                            </div>
+                        </figure>
+                    </div>
+                </div>
+            </div>
+            <div class="blog__wrap bmStyle">
+                <h2>Javascript Topic</h2>
+                <div class="cards__inner col3 line3">
+                    <div class="card">
+                        <figure class="card__img">
+                            <source srcset="assets/img/blog02.jpg, assets/img/blog02@2x.jpg, assets/img/blog02@3x.jpg" />
+                            <img src="assets/img/blog02.jpg" alt="카드이미지">
+                            <div class="card__title">
+                                <h3>자바스크립트 잘 익히는 방법</h3>
+                                <p>JavaScript의 기본부터 시작하십시오. JavaScript를 잘 이해하려면 먼저 기본을 배우는 것이 중요합니다. 문법, 변수, 함수와 같은 것들을 배웁니다.</p>
+                            </div>
+                            <div class="card__info">
+                                <span class="author">Hooong</span>
+                                <span class="date">2023.05.11</span>
+
+                            </div>
+                        </figure>
+                    </div>
+                    <div class="card">
+                        <figure class="card__img">
+                            <source srcset="assets/img/blog03.jpg, assets/img/blog03@2x.jpg, assets/img/blog03@3x.jpg" />
+                            <img src="assets/img/blog03.jpg" alt="카드이미지">
+                            <div class="card__title">
+                                <h3>리액트의 추세 알려줘</h3>
+                                <p>React의 인기는 향후 몇 년 동안 계속 증가할 것으로 예상됩니다. React는 강력하고 유연한 라이브러리이며 다양한 웹사이트와 모바일 앱을 구축하는 데 사용할 수 있습니다.
+                                     또한 React는 대규모 커뮤니티 지원을 받으므로 개발자가 문제를 해결하고 배우는 데 도움을 받을 수 있습니다.</p>
+                            </div>
+                            <div class="card__info">
+                                <span class="author">Hooong</span>
+                                <span class="date">2023.05.11</span>
+                            </div>
+                        </figure>
+                    </div>
+                    <div class="card">
+                        <figure class="card__img">
+                            <source srcset="assets/img/blog04.jpg, assets/img/blog04@2x.jpg, assets/img/blog04@3x.jpg" />
+                            <img src="assets/img/blog04.jpg" alt="카드이미지">
+                            <div class="card__title">
+                                <h3>리액트 잘하는 방법</h3>
+                                <p>인내심을 가지십시오. 새로운 언어를 배우는 데는 시간이 걸립니다. 하룻밤 사이에 전문가가 되기를 기대하지 마십시오. 계속 연습하면 결국 React를 잘하게 될 것입니다.</p>
+                            </div>
+                            <div class="card__info">
+                                <span class="author">Hooong</span>
+                                <span class="date">2023.05.11</span>
+                            </div>
+                        </figure>
+                    </div>
+                </div>
+            </div>
+            <div class="blog__wrap bmStyle">
+                <h2>Javascript Topic</h2>
+                <div class="cards__inner col4">
+                    <div class="card">
+                        <figure class="card__img">
+                            <source srcset="assets/img/blog03.jpg, assets/img/blog03@2x.jpg, assets/img/blog03@3x.jpg" />
+                            <img src="assets/img/blog03.jpg" alt="카드이미지">
+                            <div class="card__title">
+                                <h3>리액트의 추세 알려줘</h3>
+                                <p>React의 인기는 향후 몇 년 동안 계속 증가할 것으로 예상됩니다. React는 강력하고 유연한 라이브러리이며 다양한 웹사이트와 모바일 앱을 구축하는 데 사용할 수 있습니다.
+                                     또한 React는 대규모 커뮤니티 지원을 받으므로 개발자가 문제를 해결하고 배우는 데 도움을 받을 수 있습니다.</p>
+                            </div>
+                            <div class="card__info">
+                                <span>더보기</span>
+                                <span>글쓴이</span>
+                                <span>조회수</span>
+                                <span>좋아요</span>
+                            </div>
+                        </figure>
+                    </div>
+                    <div class="card">
+                        <figure class="card__img">
+                            <source srcset="assets/img/blog04.jpg, assets/img/blog04@2x.jpg, assets/img/blog04@3x.jpg" />
+                            <img src="assets/img/blog04.jpg" alt="카드이미지">
+                            <div class="card__title">
+                                <h3>리액트 잘하는 방법</h3>
+                                <p>인내심을 가지십시오. 새로운 언어를 배우는 데는 시간이 걸립니다. 하룻밤 사이에 전문가가 되기를 기대하지 마십시오. 계속 연습하면 결국 React를 잘하게 될 것입니다.</p>
+                            </div>
+                            <div class="card__info">
+                                <span>더보기</span>
+                                <span>글쓴이</span>
+                                <span>조회수</span>
+                                <span>좋아요</span>
+                            </div>
+                        </figure>
+                    </div>
+                    <div class="card">
+                        <figure class="card__img">
+                            <source srcset="assets/img/blog02.jpg, assets/img/blog02@2x.jpg, assets/img/blog02@3x.jpg" />
+                            <img src="assets/img/blog02.jpg" alt="카드이미지">
+                            <div class="card__title">
+                                <h3>자바스크립트 잘 익히는 방법</h3>
+                                <p>JavaScript의 기본부터 시작하십시오. JavaScript를 잘 이해하려면 먼저 기본을 배우는 것이 중요합니다. 문법, 변수, 함수와 같은 것들을 배웁니다.</p>
+                            </div>
+                            <div class="card__info">
+                                <span>더보기</span>
+                                <span>글쓴이</span>
+                                <span>조회수</span>
+                                <span>좋아요</span>
+                            </div>
+                        </figure>
+                    </div>
+                    <div class="card">
+                        <figure class="card__img">
+                            <source srcset="assets/img/blog06.jpg, assets/img/blog06@2x.jpg, assets/img/blog06@3x.jpg" />
+                            <img src="assets/img/blog06.jpg" alt="카드이미지">
+                            <div class="card__title">
+                                <h3>자바스크립트 잘 익히는 방법</h3>
+                                <p>JavaScript의 기본부터 시작하십시오. JavaScript를 잘 이해하려면 먼저 기본을 배우는 것이 중요합니다. 문법, 변수, 함수와 같은 것들을 배웁니다.</p>
+                            </div>
+                            <div class="card__info">
+                                <span>더보기</span>
+                                <span>글쓴이</span>
+                                <span>조회수</span>
+                                <span>좋아요</span>
+                            </div>
+                        </figure>
+                    </div>
+                </div>
+            </div>
+            <div class="blog__wrap bmStyle">
+                <h2>Javascript Topic</h2>
+                <div class="cards__inner col6 line2">
+                    <div class="card">
+                        <figure class="card__img">
+                            <source srcset="assets/img/blog01.jpg, assets/img/blog01@2x.jpg, assets/img/blog01@3x.jpg" />
+                            <img src="assets/img/blog01.jpg" alt="카드이미지">
+                            <div class="card__title">
+                                <h3>코딩 실력 키우는 방법</h3>
+                                <p>좋은 코드를 많이 보고 따라하십시오. 다른 사람들이 어떻게 코딩하는지 보는 것은 자신의 기술을 향상시키는 좋은 방법이 될 수 있습니다.</p>
+                            </div>
+                            <div class="card__info">
+                                <span>더보기</span>
+                                <span>글쓴이</span>
+                                <span>조회수</span>
+                                <span>좋아요</span>
+                            </div>
+                        </figure>
+                    </div>
+                    <div class="card">
+                        <figure class="card__img">
+                            <source srcset="assets/img/blog02.jpg, assets/img/blog02@2x.jpg, assets/img/blog02@3x.jpg" />
+                            <img src="assets/img/blog02.jpg" alt="카드이미지">
+                            <div class="card__title">
+                                <h3>자바스크립트 잘 익히는 방법</h3>
+                                <p>JavaScript의 기본부터 시작하십시오. JavaScript를 잘 이해하려면 먼저 기본을 배우는 것이 중요합니다. 문법, 변수, 함수와 같은 것들을 배웁니다.</p>
+                            </div>
+                            <div class="card__info">
+                                <span>더보기</span>
+                                <span>글쓴이</span>
+                                <span>조회수</span>
+                                <span>좋아요</span>
+                            </div>
+                        </figure>
+                    </div>
+                    <div class="card">
+                        <figure class="card__img">
+                            <source srcset="assets/img/blog03.jpg, assets/img/blog03@2x.jpg, assets/img/blog03@3x.jpg" />
+                            <img src="assets/img/blog03.jpg" alt="카드이미지">
+                            <div class="card__title">
+                                <h3>리액트의 추세 알려줘</h3>
+                                <p>React의 인기는 향후 몇 년 동안 계속 증가할 것으로 예상됩니다. React는 강력하고 유연한 라이브러리이며 다양한 웹사이트와 모바일 앱을 구축하는 데 사용할 수 있습니다.
+                                     또한 React는 대규모 커뮤니티 지원을 받으므로 개발자가 문제를 해결하고 배우는 데 도움을 받을 수 있습니다.</p>
+                            </div>
+                            <div class="card__info">
+                                <span>더보기</span>
+                                <span>글쓴이</span>
+                                <span>조회수</span>
+                                <span>좋아요</span>
+                            </div>
+                        </figure>
+                    </div>
+                    <div class="card">
+                        <figure class="card__img">
+                            <source srcset="assets/img/blog04.jpg, assets/img/blog04@2x.jpg, assets/img/blog04@3x.jpg" />
+                            <img src="assets/img/blog04.jpg" alt="카드이미지">
+                            <div class="card__title">
+                                <h3>리액트 잘하는 방법</h3>
+                                <p>인내심을 가지십시오. 새로운 언어를 배우는 데는 시간이 걸립니다. 하룻밤 사이에 전문가가 되기를 기대하지 마십시오. 계속 연습하면 결국 React를 잘하게 될 것입니다.</p>
+                            </div>
+                            <div class="card__info">
+                                <span>더보기</span>
+                                <span>글쓴이</span>
+                                <span>조회수</span>
+                                <span>좋아요</span>
+                            </div>
+                        </figure>
+                    </div>
+                    <div class="card">
+                        <figure class="card__img">
+                            <source srcset="assets/img/blog01.jpg, assets/img/blog01@2x.jpg, assets/img/blog01@3x.jpg" />
+                            <img src="assets/img/blog01.jpg" alt="카드이미지">
+                            <div class="card__title">
+                                <h3>코딩 실력 키우는 방법</h3>
+                                <p>좋은 코드를 많이 보고 따라하십시오. 다른 사람들이 어떻게 코딩하는지 보는 것은 자신의 기술을 향상시키는 좋은 방법이 될 수 있습니다.</p>
+                            </div>
+                            <div class="card__info">
+                                <span>더보기</span>
+                                <span>글쓴이</span>
+                                <span>조회수</span>
+                                <span>좋아요</span>
+                            </div>
+                        </figure>
+                    </div>
+                    <div class="card">
+                        <figure class="card__img">
+                            <source srcset="assets/img/blog01.jpg, assets/img/blog01@2x.jpg, assets/img/blog01@3x.jpg" />
+                            <img src="assets/img/blog01.jpg" alt="카드이미지">
+                            <div class="card__title">
+                                <h3>코딩 실력 키우는 방법</h3>
+                                <p>좋은 코드를 많이 보고 따라하십시오. 다른 사람들이 어떻게 코딩하는지 보는 것은 자신의 기술을 향상시키는 좋은 방법이 될 수 있습니다.</p>
+                            </div>
+                            <div class="card__info">
+                                <span>더보기</span>
+                                <span>글쓴이</span>
+                                <span>조회수</span>
+                                <span>좋아요</span>
+                            </div>
+                        </figure>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- intro__inner -->
+
+        <!-- <div class="intro__inenr"></div> 각 페이지 소개 배너
+        <div class="join__inner"></div> 회원가입 페이지
+        <div class="login__inner"></div> 로그인 페이지
+        <div class="board__inner"></div> 게시판 페이지
+        <div class="bolg__inner"></div> 블로그 메인
+
+        <div class="sliders__inner"></div>
+        <div class="banners__inner"></div>
+        <div class="cards__inner"></div>
+        <div class="images__inner"></div>
+        <div class="ads__inner"></div>
+        <div class="texts__inner"></div>
+        <div class="login__inner"></div>
+        <div class="join__inner"></div>-->
+    </main>
+    <!-- //main -->
+
+    <footer id="footer">
+        <div class="footer__inner container btStyle mb100">
+            <div>Copyright @ 2023 HoongBoy</div>
+            <div><a href="adminAgree.html" class="btnStyle5">관리자 로그인</a><a href="mailto:gnsrbdi@naver.com">by Hoong's</a></div>
+        </div>
+    </footer>
+    <!-- //footer -->
+</body>
+</html>

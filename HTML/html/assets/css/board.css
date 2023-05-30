@@ -1,0 +1,273 @@
+/* board__inner
+    +board__search
+    +board__table
+    +board__pages
+    +board__view
+    +board__btn
+    +board__write
+     */
+/*.board__inner h1 {
+    text-align: center;
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 45px;
+}
+.board__images {
+    width: 30%;
+    display: block;
+    margin: 100px auto 50px auto;
+}
+.board__images img {
+    border-radius: 500px;
+}
+.board__text {
+    width: 70%;
+    font-size: 20px;
+    margin: 0 auto 60px auto;
+    text-align: center;
+}
+
+.boardinfo {
+    display: flex;
+    justify-content: space-between;
+    height: 38px;
+    align-items: flex-end;
+    margin-bottom: 10px;
+}
+.boardinfo span {
+    display: inline-block;
+    width: 50%;
+}
+.boardinfo span em{
+    color: red;
+}
+.boardinfo > div {
+    display: flex;
+    justify-content: space-between;
+    width: 45%;
+    height: 100%;
+}
+.boardinfo > div input {
+    width: 47%;
+    border: none;
+}
+.boardinfo > div select {
+    width: 16%;
+    border: none;
+    appearance: none;
+    text-align: center;
+    border-radius: 5px;
+}
+.boardinfo > div .search {
+    width: 16%;
+    background-color: #fff;
+    color: #000;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.boardinfo > div .write {
+    background-color: #000;
+    color: #fff;
+    width: 17%;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.boardTable {
+    width: 100%;
+    border-spacing: 0;
+    border-collapse: collapse;
+    margin-bottom: 55px;
+    text-align: center;
+    border-top: 4px solid #000;
+    border-bottom: 4px solid #000;
+}
+.boardTable a:hover {
+    text-decoration: underline;
+}
+.boardTable tr {
+    height: 55px;
+}
+.boardTable tr:nth-child(1) {
+    font-size: 20px;
+    font-weight: 700;
+    background-color: #d9d9d9;
+}
+.boardTable tr td {
+    border-top: 1px solid #000;
+}
+.boardTable tr td:nth-child(1) {
+    width: 10%;
+}
+.boardTable tr td:nth-child(2) {
+    width: 60%;
+}
+.boardTable tr td:nth-child(3) {
+    width: 10%;
+}
+.boardTable tr td:nth-child(4) {
+    width: 10%;
+}
+.boardTable tr td:nth-child(5) {
+    width: 10%;
+}
+
+.boardPagetable {
+    border-spacing: 0px;
+    font-weight: 700;
+    text-align: center;
+    margin: 0 auto;
+    width: 50%;
+    border-collapse: collapse;
+    margin-bottom: 100px;
+}
+.boardPagetable tr td {
+    border: 2px solid #d4d4d4;
+}
+.boardPagetable tr td.active {
+    background-color: #000;
+    border: 2px solid #000;
+}
+.boardPagetable tr td.active a {
+    color: #fff;
+}
+
+.footer__inner {
+    height: 100px;
+    padding: 5px 0;
+    display: flex;
+    justify-content: space-between;
+}
+.footer__inner span{
+    display: inline-block;
+} */
+
+/* 수업시간 */
+.board__inner {
+    margin-bottom: 100px;
+}
+.board__images img {
+    border-radius: 100px;
+}
+.board__search {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-top: 120px;
+}
+.board__search .left {
+    width: 40%;
+}
+.board__search .left em {
+    color: red;
+}
+.board__search .right {
+    width: 60%;
+    text-align: right;
+}
+.board__search .right input {
+    height: 42px;
+    border: 0;
+    background-color: var(--color__white);
+    padding: 9px 30px;
+    border-radius: 5px;
+}
+.board__search .right select {
+    width: 90px;
+    height: 42px;
+    border: 0;
+    padding: 11px;
+    border-radius: 5px;
+}
+.board__table {
+    margin-top: 10px;
+    border-top: 2px solid var(--color__black);
+    border-bottom: 2px solid var(--color__black);
+    margin-bottom: 60px;
+    text-align: center;
+}
+.board__table table th {
+    background-color: var(--bg__gray2);
+    padding: 15px 5px;
+    font-weight: 500;
+}
+.board__table table tr:hover {
+    background-color: var(--bg__gray2);
+}
+.board__table table td {
+    padding: 15px 5px;
+    border-bottom: 1px solid var(--color__black);
+}
+.board__table table td a:hover {
+    text-decoration: underline;
+    text-underline-position: under;
+}
+.board__pages {
+    margin-bottom: 100px;
+}
+.board__pages ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.board__pages ul li a {
+    border: 1px solid var(--bg__gray3);
+    padding: 10px 13px;
+    margin-left: -1px;
+}
+.board__pages ul li.active a {
+    background: var(--color__black);
+    color: var(--color__white);
+}
+.board__pages ul li a:hover {
+    background-color: var(--bg__gray2);
+}
+
+.board__view {
+    margin-top: 40px;
+    border-top: 2px solid var(--color__black);
+    border-bottom: 2px solid var(--color__black);
+}
+.board__view table td,
+.board__view table th {
+    padding: 15px;
+    border-bottom: 1px solid var(--color__black);
+}
+.board__view table tr:last-child td {
+    height: 500px;
+    vertical-align: top;
+}
+.board__view table th {
+    background-color: var(--bg__gray2);
+}
+.board__btn {
+    margin-top: 20px;
+    text-align: right;
+}
+
+.board__write {
+    padding: 50px 0 100px;
+}
+.board__write label {
+    display: block;
+    width: 100%;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+.board__write input {
+    margin-bottom: 50px;
+}
+.board__write textarea {
+    padding: 2em;
+    resize: none;
+}
+.board__write button {
+    cursor: pointer;
+    margin-top: 10px;
+    float: right;
+    transition: all 0.2s;
+}
+.board__write button:hover {
+    background-color: var(--bg__gray3);
+    color: var(--color__black);
+}

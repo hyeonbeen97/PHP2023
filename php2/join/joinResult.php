@@ -40,7 +40,7 @@
                                 $youQuestion = $_POST['youQuestion'];
                                 $youAnswer = $_POST['youAnswer'];
                                 $regTime = time();
-                                $sql = "INSERT INTO plantyMember(youEmail, youName, youNick, youPass, youPhone,youQuestion, youAnswer, regTime) VALUES('$youEmail', '$youName','$youNick', '$youPass', '$youPhone', '$youQuestion','$youAnswer', '$regTime')";
+                                $sql = "INSERT INTO plantyMember(youEmail, youName, youNick, youPass, youPhone, myImgName,youQuestion, youAnswer, regTime) VALUES('$youEmail', '$youName','$youNick', '$youPass', '$youPhone','Img_default.jpg', '$youQuestion','$youAnswer', '$regTime')";
                                 $connect -> query($sql);
                             ?>
                             </div>

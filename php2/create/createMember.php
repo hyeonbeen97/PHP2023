@@ -9,6 +9,8 @@
     $sql .= "youPhone varchar(20),";
     $sql .= "youQuestion varchar(100),";
     $sql .= "youAnswer varchar(100),";
+    $sql .= "blogImgName varchar(100) DEFAULT NULL,";
+    $sql .= "blogImgSize varchar(100) DEFAULT NULL,";
     $sql .= "regTime int(40) NOT NULL,";
     $sql .= "PRIMARY KEY(memberID)";
     $sql .= ") charset=utf8;";

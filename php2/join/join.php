@@ -30,7 +30,7 @@
                                 <label for="youEmail" class="required">이메일</label>
                                 <div class="input__inner">
                                     <input class="inputStyle" type="email" id="youEmail" name="youEmail" placeholder="이메일을 입력해주세요" required>
-                                    <a href="#c" class="checkbtn"  onclick="emailChecking()">중복확인</a>
+                                    <a href="#c" class="checkbtn"  onclick="emailChecking()" required>중복확인</a>
                                     <p class="msg" id="youEmailComment"><!--이메일이 존재합니다.--></p>
                                     
                                 </div>
@@ -49,7 +49,7 @@
                                 <label for="youNick" class="required">닉네임</label>
                                 <div class="input__inner">
                                     <input class="inputStyle" type="text" id="youNick" name="youNick" placeholder="닉네임을 입력해주세요" required>
-                                    <a href="#c" class="checkbtn" onclick="nickChecking()">중복확인</a>
+                                    <a href="#c" class="checkbtn" onclick="nickChecking()" required>중복확인</a>
                                     <p class="msg" id="youNickComment"><!--닉네임이 존재합니다.--></p>
                                 </div>
                             </div>
@@ -106,6 +106,9 @@
                         }else {
                             $("#youEmailComment").text("* 이미 존재하는 이메일 입니다");
                             isEmailCheck = false;
+                            $("#youEmail").val('');
+                            $("#youEmail").focus();
+                            
                         }
                     },
                     error : function(request, status, error){
@@ -133,6 +136,8 @@
                         }else {
                             $("#youNickComment").text("* 이미 존재하는 닉네임 입니다");
                             isNickCheck = false;
+                            $("#youNick").val('');
+                            $("#youNick").focus();
                         }
                     },
                     error : function(request, status, error){
@@ -228,6 +233,16 @@
                 $("#youPhone").focus();
                 return false;
             }
+
+            if (!isEmailCheck) {
+                alert("이메일 중복확인을 해주세요.");
+                return false;
+            }
+            if (!isNickCheck) {
+                alert("닉네임 중복확인을 해주세요.");
+                return false;
+            }
+            return true;
         }
     </script>
 </body>
